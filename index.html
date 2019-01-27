@@ -2,11 +2,146 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Девайс</title>
+    <title>Device</title>
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
-
+    <header class="main-header">
+      <nav class="main-navigation">
+        <a class="logo-header">DEVICE</a>
+        <a class="search-link" href="#">Поиск по сайту</a>
+        <div class="user-block-header">
+          <a class="login-link" href="#">Войти</a>
+          <a class="compare-link" href="#">Сравнить</a>
+          <a class="shopping-cart-link" href="#">Корзина</a>
+        </div>
+        <ul class="menu-header">
+          <li><a href="">Каталог товаров</a>
+            <ul class="menu-catalog">
+              <li><a href="">Виртуальная реальность</a></li>
+              <li><a href="catalog.html">Моноподы для селфи</a></li>
+              <li><a href="">Экшн-камеры</a></li>
+              <li><a href="">Фитнес-браслеты</a></li>
+              <li><a href="">Умные часы</a></li>
+              <li><a href="">Квадрокоптеры</a></li>
+            </ul>
+          </li>
+          <li><a href="">Доставка</a></li>
+          <li><a href="">Гарантия</a></li>
+          <li><a href="">Контакты</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1 class="visually-hidden">Магазин гаджетов "Device"</h1>
+      <section class="carousel">
+        <h2 class="visually-hidden">Интересные предложения</h2>
+        <!-- Здесь будет слайдер -->
+      </section>
+      <section class="popular">
+        <h2 class="visually-hidden">Популярные товары</h2>
+        <ol>
+          <li class="popular-item">
+            <a href="#"><img src="img/popular-1.svg" width="160" height="160" alt="фотография очков виртуальной реальности">Виртуальная реальность</a>
+          </li>
+          <li class="popular-item">
+            <a href="catalog.html"><img src="img/popular-2.svg" width="160" height="160" alt="фотография монопода">Моноподы для селфи</a>
+          </li>
+          <li class="popular-item">
+            <a href="#"><img src="img/popular-3.svg" width="160" height="160" alt="фотография экшн-камеры">Экшн-камеры</a>
+          </li>
+          <li class="popular-item">
+            <a href="#"><img src="img/popular-4.svg" width="160" height="160" alt="фотография фитнес браслета">Фитнес-браслеты</a>
+          </li>
+          <li class="popular-item">
+            <a href="#"><img src="img/popular-5.svg" width="160" height="160" alt="фотография умных часов">Умные часы</a>
+          </li>
+          <li class="popular-item">
+            <a href="#"><img src="img/popular-6.svg" width="160" height="160" alt="фотография квадрокоптера">Квадрокоптеры</a>
+          </li>
+        </ol>
+      </section>
+      <section class="services">
+        <h2 class="visually-hidden">Услуги</h2>
+        <!-- Здесь будет слайдер -->
+      </section>
+      <section class="brands">
+        <h2 class="visually-hidden">Бренды</h2>
+        <ul class="brands-promo">
+          <li>
+            <a class="brand-link brand-link-JD" href=""><img src="img/logo-1.png" width="260" height="100" alt="ЖД"></a>
+          </li>
+          <li>
+            <a class="brand-link brand-link-PGadgets" href=""><img src="img/logo-2.png" width="260" height="100" alt="SPGadgets"></a>
+          </li>
+          <li>
+            <a class="brand-link brand-link-Gopro" href=""><img src="img/logo-3.png" width="260" height="100" alt="Gopro"></a>
+          </li>
+          <li>
+            <a class="brand-link brand-link-Vive" href=""><img src="img/logo-4.png" width="260" height="100" alt="Vive"></a>
+          </li>
+        </ul>
+      </section>
+      <section class="about-us">
+        <h3 class="about-us-title">О нас</h3>
+        <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас</p>
+        <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
+        <ul class="about-us-partners">
+          <li><a href="#">Деловые Линии</a></li>
+          <li><a href="#">Автотрейдинг</a></li>
+          <li><a href="#">ЖелДорЭкспедиция</a></li>
+        </ul>
+        <a class="btn about-us-btn" href="#">Подробнее о нас</a>
+      </section>
+      <section class="contact-main">
+        <h3 class="contact-main-title">Контакты</h3>
+        <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
+        <div class="contact-main-map"><img src="img/map.jpg" width="560" height="222" alt="Улица Строителей 15"></div>
+        <button class="btn contact-main-btn">Напишите нам</button>
+      </section>
+    </main>
+    <footer class="main-footer">
+      <nav class="footer-navigation">
+        <a class="logo-footer">DEVICE</a>
+        <div class="user-block-footer">
+          <a class="login-footer-link" href="#">Войти</a>
+          <a class="compare-footer-link" href="#">Сравнить</a>
+          <a class="shopping-cart-footer-link" href="#">Корзина</a>
+        </div>
+        <ul class="menu-footer">
+          <li>Доставка</li>
+          <li>Гарантия</li>
+          <li>Контакты</li>
+        </ul>
+      </nav>
+      <div class="footer-contacts">
+        <p class="address-footer">г.Москва, ул. Строителей, 15</p>
+        <p class="phone-footer">Тел.: +7 (495) 495-95-95</p>
+      </div>
+      <div class="footer-social">
+        <ul>
+          <li>
+            <a class="social-button social-fb" href="#">Facebook</a>
+          </li>
+          <li>
+            <a class="social-button social-inst"  href="#">Instagram</a>
+          </li>
+          <li>
+            <a class="social-button social-tw"  href="#">Твиттер</a>
+          </li>
+        </ul>
+      </div>
+      <p class="footer-copyright">
+        <a class="footer-copyright-link" href="https://htmlacademy.ru/intensive/htmlcss">Логотип академии</a>
+      </p>
+    </footer>
+    <section class="modal modal-write-us">
+      <h2 class="visually-hidden">Форма отправки письма</h2>
+      <!-- Здесь будет форма -->
+      <button class="modal-close" type="button">Закрыть</button>
+    </section>
+    <section class="modal modal-map">
+        <h2 class="visually-hidden">Карта</h2>
+        <button class="modal-close" type="button">Закрыть</button>
+    </section>
   </body>
 </html>
