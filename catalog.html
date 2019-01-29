@@ -8,7 +8,13 @@
     <header class="main-header">
       <nav class="main-navigation">
         <a class="logo-header" href="index.html">DEVICE</a>
-        <a class="search-link" href="#">Поиск по сайту</a>
+        <form class="search-form" action="/echo" method="post">
+          <label for="search-field">Поиск</label>
+          <input type="search" name="search" id="search-field" placeholder="Поиск по сайту">
+          <div class="btn-search-form">
+            <input type="submit" value="Найти">
+          </div>
+        </form>
         <div class="user-block-header">
           <a class="login-link" href="#">Валентин Петухов Выйти</a>
           <a class="compare-link" href="#">Сравнить</a>
@@ -46,25 +52,90 @@
       </ul>
       <section class="filters">
         <h2 class="filters-title">Фильтр:</h2>
-          <!-- Здесь будет форма -->
+        <form class="filters-form" action="#" method="get">
+          <legend class="filters-form-title">Фильтр:</legend>
+          <fieldset class="filter-item filter-form-price">
+            <legend class="form-price-title">Стоимость</legend>
+            <div class="form-price-scale">
+              <div class="price-range">
+                <div class="form-price-toogle">
+                  <button class="price-toogle price-toogle-min" type="button">левый ползунок</button>
+                  <button class="price-toogle price-toogle-man" type="button">правый ползунок</button>
+                </div>
+              </div>
+            </div>
+            <div class="form-price-value">
+              <span class="form-price-min">от 0</span>
+              <span class="form-price-max">до 500</span>
+            </div>
+          </fieldset>
+          <fieldset class="filter-item filter-form-colour">
+            <legend class="form-colour-title">Цвет</legend>
+            <ul class="form-topping-check">
+              <li class="filter-option">
+                <input class="form-colour-input filter-input-checkbox" checked type="checkbox" name="colour" id="colour-1">
+                <label class="form-colour-label colour-1" for="colour-1">Черный</label>
+              </li>
+              <li class="filter-option">
+                <input class="form-colour-input filter-input-checkbox" type="checkbox" name="colour" id="colour-2">
+                <label class="form-colour-label colour-2" for="colour-2">Белый</label>
+              </li>
+              <li class="filter-option">
+                <input class="form-colour-input filter-input-checkbox" checked type="checkbox" name="colour" id="colour-3">
+                <label class="form-colour-label colour-3" for="colour-3">Синий</label>
+              </li>
+              <li class="filter-option">
+                <input class="form-colour-input filter-input-checkbox" checked type="checkbox" name="colour" id="colour-4">
+                <label class="form-colour-label colour-4" for="colour-4">Красный</label>
+              </li>
+              <li class="filter-option">
+                <input class="form-colour-input filter-input-checkbox" type="checkbox" name="colour" id="colour-5">
+                <label class="form-colour-label colour-5" for="colour-5">Розовый</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="filter-item filter-form-bluetooth">
+            <legend class="form-bluetooth-title">Bluetooth</legend>
+            <ul class="form-bluetooth-radio">
+              <li class="filter-option">
+                <input class="form-bluetooth-input filter-input-radio" checked type="radio" name="bluetooth" value="pin-1" id="bluetooth-1">
+                <label class="form-bluetooth-label" for="bluetooth-1">Есть</label>
+              </li>
+              <li class="filter-option">
+                <input class="form-bluetooth-input filter-input-radio" type="radio" name="bluetooth" value="pin-2" id="bluetooth-2">
+                <label class="form-bluetooth-label" for="bluetooth-2">Нет</label>
+              </li>
+            </ul>
+          </fieldset>
+          <div class="btn-filters-form">
+            <input type="submit" value="Показать">
+          </div>
+        </form>
       </section>
       <section class="sorting">
         <h2 class="sorting-title">Сортировка:</h2>
-        <ul class="sorting-menu">
+        <ul class="sorting-list sorting-list-right">
           <li class="sorting-element">
-            <a class="price" href="#">по цене</a>
+            <input class="visually-hidden sorting-input" name="sort" value="price" type="radio" id="sorting-price" checked>
+            <label class="sorting-label" for="sorting-price">по цене</label>
           </li>
           <li class="sorting-element">
-            <a class="type" href="#">по типу</a>
+            <input class="visually-hidden sorting-input" name="sort" value="type" type="radio" id="sorting-type">
+            <label class="sorting-label" for="sorting-type">по типу</label>
           </li>
           <li class="sorting-element">
-            <a class="popular" href="#">по популярности</a>
+            <input class="visually-hidden sorting-input" name="sort" value="popular" type="radio" id="sorting-popular">
+            <label class="sorting-label" for="sorting-popular">по популярности</label>
+          </li>
+        </ul>
+        <ul class="sorting-list sorting-list-left">
+          <li class="sorting-element">
+            <input class="visually-hidden sorting-input" name="sort-left" value="up" type="radio" id="sorting-up">
+            <label class="sorting-label" for="sorting-up">по возрастанию</label>
           </li>
           <li class="sorting-element">
-            <a class="btn-up" href="">по возрастанию</a>
-          </li>
-          <li class="sorting-element">
-            <a class="btn-down" href="">по убыванию</a>
+            <input class="visually-hidden sorting-input" name="sort-left" value="down" type="radio" id="sorting-down" checked>
+            <label class="sorting-label" for="sorting-down">по убыванию</label>
           </li>
         </ul>
       </section>
