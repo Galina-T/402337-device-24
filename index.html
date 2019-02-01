@@ -14,10 +14,10 @@
     <header class="main-header">
       <nav class="main-navigation">
         <a class="logo-header"><img src="img/logo.png" width="163" height="35" alt="DEVICE"></a>
-        <form class="search-form" action="/echo" method="post">
+        <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
           <label for="search-field">Поиск</label>
           <input type="search" name="search" id="search-field" placeholder="Поиск по сайту">
-          <input class="btn-search-form" type="submit" value="Найти">
+          <button class="btn-search-form" type="submit">Найти</button>
         </form>
         <ul class="user-block-header">
           <li><a class="login-link" href="#">Войти</a></li>
@@ -235,7 +235,7 @@
       </p>
     </footer>
     <section class="modal modal-write-us">
-      <form class="write-us-form">
+      <form class="write-us-form" action="https://echo.htmlacademy.ru" method="post">
         <fieldset>
           <legend class="visually-hidden">Форма для отправки нам сообщения</legend>
           <label class="write-us-form-label" for="login-field">Ваше имя:</label>
@@ -244,7 +244,7 @@
           <input type="email" name="email" id="email-field" placeholder="email@example.com" required>
           <label class="write-us-form-label">Текст письма:</label>
           <textarea name="comment" id="comment-field" placeholder="В свободной форме" required></textarea>
-          <input class="btn btn-write-us" type="submit" value="Отправить">
+          <button class="btn btn-write-us" type="submit">Отправить</button>
         </fieldset>
       </form>
       <button class="modal-close" type="button">Закрыть</button>
