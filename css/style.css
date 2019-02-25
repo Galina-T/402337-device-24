@@ -18,7 +18,6 @@ body {
   margin: 0;
   padding: 0;
   min-width: 1440px;
-  min-height: 2795px;
   font-family: "Gilroy", "Arial", sans-serif;
   font-size: 18px;
   line-height: 24px;
@@ -227,8 +226,6 @@ a {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  /* margin-left: 0px;
-  text-align: center; */
 }
 
 .user-link {
@@ -303,9 +300,7 @@ a {
 }
 
 .menu-header-link {
-  /* position: relative; */
   margin-right: 35px;
-
 }
 
 .menu-header-link:first-child {
@@ -351,7 +346,7 @@ a {
   position: absolute;
   left: 0;
   padding-top: 22px;
-  z-index: 10;
+  z-index: 3;
   display: none;
   width: 100%;
   background-color: #f7e296;
@@ -419,7 +414,6 @@ a {
   background-position: right center;
 }
 
-
 .breadcrumbs-element a:hover {
   color:rgba(0, 0, 0, 0.6);
 }
@@ -467,12 +461,21 @@ a {
   position: absolute;
   left: 0;
   right: 0;
-  /* display: none; */
 }
 
 #slide-1:checked ~ .carousel #carousel-slide-1,
 #slide-2:checked ~ .carousel #carousel-slide-2,
 #slide-3:checked ~ .carousel #carousel-slide-3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  visibility: visible;
+}
+
+.slide-show {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -509,7 +512,13 @@ a {
   z-index: 2;
 }
 
+.slide-foto img {
+  display: block;
+  margin: 0 auto;
+}
+
 .slide-info {
+  position: relative;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding-top: 82px;
@@ -522,8 +531,16 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  /* justify-content: flex-end; */
   z-index: 2;
+}
+
+.slide-info::before {
+  position: absolute;
+  top: 40px;
+  content: "";
+  width: 100px;
+  height: 7px;
+  background-color: #ffffff;
 }
 
 .carousel-controls {
@@ -549,6 +566,25 @@ a {
   margin-right: 0;
 }
 
+.carousel-controls label:hover,
+.carousel-controls label:focus {
+  -webkit-box-shadow:
+  inset 0 0 0 2px #ffffff,
+  inset 0 0 0 3px rgba(0, 0, 0, 0.3);
+        box-shadow:
+  inset 0 0 0 2px #ffffff,
+  inset 0 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-controls label:active {
+  -webkit-box-shadow:
+  inset 0 0 0 2px #ffffff,
+  inset 0 0 0 3px rgba(0, 0, 0, 0.6);
+        box-shadow:
+  inset 0 0 0 2px #ffffff,
+  inset 0 0 0 3px rgba(0, 0, 0, 0.6);
+}
+
 #slide-1:checked ~ .carousel label[for="slide-1"],
 #slide-2:checked ~ .carousel label[for="slide-2"],
 #slide-3:checked ~ .carousel label[for="slide-3"] {
@@ -558,6 +594,15 @@ a {
           box-shadow:
     inset 0 0 0 2px #ffffff,
     inset 0 0 0 3px #000000;
+}
+
+.label-active {
+  -webkit-box-shadow:
+  inset 0 0 0 2px #ffffff,
+  inset 0 0 0 3px #000000;
+        box-shadow:
+  inset 0 0 0 2px #ffffff,
+  inset 0 0 0 3px #000000;
 }
 
 .slide-title {
@@ -592,11 +637,10 @@ a {
   -webkit-box-direction: reverse;
       -ms-flex-direction: column-reverse;
           flex-direction: column-reverse;
-  margin-bottom: 5px;
 }
 
 .slide-options thead {
-  padding: 6px 0;
+  padding: 5px 0;
 }
 
 .parameter th {
@@ -621,7 +665,7 @@ a {
 
 .slide .btn {
   width: 220px;
-  margin-bottom: 47px;
+  margin-bottom: 48px;
 }
 
 .popular {
@@ -853,14 +897,65 @@ a {
 }
 
 .brand-link {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
   opacity: 0.2;
+}
+
+.brand-link-JD::after {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 260px;
+  height: 100px;
+  background-image: url(../img/logo-dji-hover.png);
+  opacity: 0;
+}
+
+.brand-link-PGadgets::after {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 260px;
+  height: 100px;
+  background-image: url(../img/logo-spg-hover.png);
+  opacity: 0;
+}
+
+.brand-link-Gopro::after {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 260px;
+  height: 100px;
+  background-image: url(../img/logo-gopro-hover.png);
+  opacity: 0;
+}
+
+.brand-link-Vive::after {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 260px;
+  height: 100px;
+  background-image: url(../img/logo-vive-hover.png);
+  opacity: 0;
+}
+
+.brand-link:hover::after {
+  opacity: 1;
 }
 
 .brand-link:hover {
@@ -940,7 +1035,6 @@ a {
   border-radius: 50%;
 }
 
-
 .contact-main {
   position: relative;
   width: 560px;
@@ -958,11 +1052,13 @@ a {
   padding: 10px 0 14px 0;
 }
 
-.contact-main-map a {
-  width: 560px;
-  height: 222px;
+.contact-map-link {
   display: block;
   background-color: #e9e9e9;
+}
+
+.contact-map-link img {
+  display: block;
 }
 
 /* ------catalog style----------- */
@@ -1362,7 +1458,25 @@ a {
   position: relative;
   padding: 0;
   margin: 0;
-  margin-bottom: 27px;
+  margin-bottom: 33px;
+  background-color: #eeeeee;
+}
+
+.new {
+  position: absolute;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  padding: 17px 0 17px 0;
+  top: 29px;
+  right: 27px;
+  border: 2px solid #000000;
+  border-radius: 50%;
+  font-size: 14px;
+  opacity: 0.2;
+  width: 60px;
+  height: 60px;
+  text-align: center;
 }
 
 .item-img::after {
@@ -1380,7 +1494,6 @@ a {
   position: absolute;
   top: 173px;
   width: 100%;
-  height: 100%;
   text-align: center;
   display: none;
   z-index: 2;
@@ -1395,6 +1508,10 @@ a {
   margin: 0 auto;
   width: 200px;
   margin-bottom: 6px;
+}
+
+.item-img img {
+  display: block;
 }
 
 .item-ptice {
@@ -1484,7 +1601,6 @@ a {
 
 /* -------------- */
 
-
 .main-footer {
   background-color: #464646;
 }
@@ -1507,6 +1623,7 @@ a {
 .footer-navigation {
   margin-top: 65px;
   margin-bottom: 65px;
+  z-index: 1;
 }
 
 .footer-user-wrapper {
@@ -1633,7 +1750,8 @@ a {
 
 .footer-social {
   margin: 0 auto;
-  margin-bottom: 60px;
+  margin-bottom: 66px;
+  z-index: 1;
 }
 
 .footer-social-list {
@@ -1654,6 +1772,7 @@ a {
 }
 
 .footer-social a {
+  display: block;
   width: 32px;
   height: 32px;
   opacity: 0.3;
@@ -1708,12 +1827,21 @@ a {
   background-position: 0 0;
 }
 
+.footer-copyright-link:hover {
+  opacity: 0.6;
+}
+
+.footer-copyright-link:active {
+  opacity: 0.3;
+}
+
 .modal {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: fixed;
   -webkit-box-shadow: 10px 10px 20px 0 rgba(0, 0, 0, 0.1);
           box-shadow: 10px 10px 20px 0 rgba(0, 0, 0, 0.1);
+  z-index: 5;
 }
 
 .modal-write-us {
@@ -1801,6 +1929,10 @@ a {
 
 .modal-close:active {
   opacity: 0.3;
+}
+
+.modal-show {
+  display: block;
 }
 
 .btn {
