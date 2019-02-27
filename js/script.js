@@ -94,7 +94,7 @@ carouselControls.addEventListener("click", function (evt) {
   var forLable = evt.srcElement.htmlFor;
   var idSlide = 'carousel-' + forLable;
 
-  Array.prototype.forEach.call(slides, ((element, inx) => {
+  Array.prototype.forEach.call(slides, function (element, inx) {
 
     if (element.id === idSlide) {
       document.getElementById(forLable).checked = false;
@@ -104,5 +104,5 @@ carouselControls.addEventListener("click", function (evt) {
       element.classList.remove("slide-show");
       controls[inx].classList.remove("label-active");
     }
-  }));
+  });
 });
