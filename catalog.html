@@ -62,7 +62,7 @@
             <a href="#">Каталог товаров</a>
           </li>
           <li class="breadcrumbs-element">
-            <span class="breadcrumbs-active">Моноподы для селфи</span>
+            Моноподы для селфи
           </li>
         </ul>
       </div>
@@ -105,41 +105,41 @@
                 <div class="form-price-scale">
                   <div class="price-range">
                     <div class="form-price-toogle">
-                      <button class="price-toogle price-toogle-min" type="button">
-                        <span class="visually-hidden">левый ползунок</span>
-                      </button>
-                      <button class="price-toogle price-toogle-max" type="button">
-                        <span class="visually-hidden">правый ползунок</span>
-                      </button>
+                      <button class="price-toogle price-toogle-min" type="button">левый ползунок</button>
+                      <button class="price-toogle price-toogle-max" type="button">правый ползунок</button>
                     </div>
                   </div>
                 </div>
                 <div class="form-price-value">
-                  <span class="form-price-min">от 0</span>
-                  <span class="form-price-max">до 5000</span>
+                  <label class="form-price-min">от
+                    <input type="text" name="min-price" value="0">
+                  </label>
+                  <label class="form-price-max">до
+                    <input type="text" name="max-price" value="5000">
+                  </label>
                 </div>
               </fieldset>
               <fieldset class="filter-item filter-form-colour">
                 <legend class="form-colour-title">Цвет</legend>
                 <ul class="form-colour-check">
                   <li class="filter-option">
-                    <input class="form-colour-input visually-hidden" checked type="checkbox" name="colour" id="colour-1">
+                    <input class="form-colour-input visually-hidden" checked type="checkbox" name="colour" id="colour-1" value="black">
                     <label class="form-colour-label colour-1" for="colour-1">Черный</label>
                   </li>
                   <li class="filter-option">
-                    <input class="form-colour-input visually-hidden" type="checkbox" name="colour" id="colour-2">
+                    <input class="form-colour-input visually-hidden" type="checkbox" name="colour" id="colour-2" value="white">
                     <label class="form-colour-label colour-2" for="colour-2">Белый</label>
                   </li>
                   <li class="filter-option">
-                    <input class="form-colour-input visually-hidden" checked type="checkbox" name="colour" id="colour-3">
+                    <input class="form-colour-input visually-hidden" checked type="checkbox" name="colour" id="colour-3" value="blue">
                     <label class="form-colour-label colour-3" for="colour-3">Синий</label>
                   </li>
                   <li class="filter-option">
-                    <input class="form-colour-input visually-hidden" checked type="checkbox" name="colour" id="colour-4">
+                    <input class="form-colour-input visually-hidden" checked type="checkbox" name="colour" id="colour-4" value="red">
                     <label class="form-colour-label colour-4" for="colour-4">Красный</label>
                   </li>
                   <li class="filter-option">
-                    <input class="form-colour-input visually-hidden" type="checkbox" name="colour" id="colour-5">
+                    <input class="form-colour-input visually-hidden" type="checkbox" name="colour" id="colour-5" value="pink">
                     <label class="form-colour-label colour-5" for="colour-5">Розовый</label>
                   </li>
                 </ul>
@@ -181,7 +181,7 @@
               <li class="card-item">
                 <div class="card-header">
                   <h3 class="item-title">
-                    <a href="#">Профессиональная<br>селфи-палка</a>
+                    <a href="#">Профессиональная селфи-палка</a>
                   </h3>
                   <span class="item-ptice">1 500 руб.</span>
                 </div>
@@ -225,13 +225,13 @@
               </li>
             </ul>
             <div class="pagination">
-              <a class="prev"><span>Назад</span></a>
+              <a class="prev">Назад</a>
               <ul class="pagination-list">
                 <li><a class="paginator-item paginator-item-current">1</a></li>
                 <li><a class="paginator-item disabled" href="#">2</a></li>
                 <li><a class="paginator-item disabled" href="#">3</a></li>
               </ul>
-              <a class="next" href="#"><span>Вперед</span></a>
+              <a class="next" href="#">Вперед</a>
             </div>
           </section>
         </div>
@@ -290,10 +290,7 @@
           </ul>
         </div>
         <div class="footer-copyright">
-          <span class="decor-item"></span>
-          <a class="footer-copyright-link" href="https://htmlacademy.ru/intensive/htmlcss">
-            <span class="visually-hidden">Логотип академии</span>
-          </a>
+          <a class="footer-copyright-link" href="https://htmlacademy.ru/intensive/htmlcss">Логотип академии</a>
         </div>
       </div>
     </footer>

@@ -3,7 +3,7 @@
 var writeBtn = document.querySelector(".write-btn");
 var writePopup = document.querySelector(".modal-write-us");
 var close = writePopup.querySelector(".modal-close");
-var form = writePopup.querySelector(".write-us-form");
+var form = writePopup.querySelector("form");
 var login = writePopup.querySelector("[name=login]");
 var email = writePopup.querySelector("[name=email]");
 var comment = writePopup.querySelector("[name=comment]");
@@ -31,12 +31,13 @@ writeBtn.addEventListener("click", function (evt) {
 close.addEventListener("click", function (evt) {
   evt.preventDefault();
   writePopup.classList.remove("modal-show");
+  writePopup.classList.remove("modal-error");
 });
 
 form.addEventListener("submit", function (evt) {
   if (!login.value || !email.value || !comment.value) {
     evt.preventDefault();
-    console.log("Заполните,пожалуйста, все поля формы");
+    writePopup.classList.add("modal-error");
   } else {
     if (isStorageSupport) {
       localStorage.setItem("login", login.value);
@@ -49,6 +50,7 @@ window.addEventListener("keydown", function (evt) {
     evt.preventDefault();
     if (writePopup.classList.contains("modal-show")) {
       writePopup.classList.remove("modal-show");
+      writePopup.classList.remove("modal-error");
     }
   }
 });
