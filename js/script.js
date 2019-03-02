@@ -22,9 +22,17 @@ writeBtn.addEventListener("click", function (evt) {
   writePopup.classList.add("modal-show");
   if (storage) {
     login.value = storage;
-    email.focus();
+    if (email.setActive) {
+      email.setActive();
+    } else {
+      email.focus();
+    }
   } else {
-    login.focus();
+    if (login.setActive) {
+      login.setActive();
+    } else {
+      login.focus();
+    }
   }
 });
 
