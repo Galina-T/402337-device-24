@@ -32,12 +32,29 @@ close.addEventListener("click", function (evt) {
   evt.preventDefault();
   writePopup.classList.remove("modal-show");
   writePopup.classList.remove("modal-error");
+  removeInvalide(login);
+  removeInvalide(email);
+  removeInvalide(comment);
 });
+
+function checkValide (el) {
+  if (el.value) {
+    return;
+  }
+  el.classList.add("invalid-input");
+}
+
+function removeInvalide (el) {
+  el.classList.remove("invalid-input");
+}
 
 form.addEventListener("submit", function (evt) {
   if (!login.value || !email.value || !comment.value) {
     evt.preventDefault();
     writePopup.classList.add("modal-error");
+    checkValide(login);
+    checkValide(email);
+    checkValide(comment);
   } else {
     if (isStorageSupport) {
       localStorage.setItem("login", login.value);
@@ -51,6 +68,9 @@ window.addEventListener("keydown", function (evt) {
     if (writePopup.classList.contains("modal-show")) {
       writePopup.classList.remove("modal-show");
       writePopup.classList.remove("modal-error");
+      removeInvalide(login);
+      removeInvalide(email);
+      removeInvalide(comment);
     }
   }
 });

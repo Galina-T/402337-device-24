@@ -102,6 +102,10 @@ a {
           filter: brightness(0);
 }
 
+.logo-header svg {
+  pointer-events: none;
+}
+
 .logo-header:hover {
   opacity: 0.6;
 }
@@ -739,6 +743,12 @@ a {
   padding-right: 35px;
 }
 
+.popular-list a {
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
 .popular-list a:hover .popular-item-img {
   background-color: rgba(240, 197, 46, 1);
 }
@@ -749,6 +759,10 @@ a {
 
 .popular-list a:active img {
   opacity: 0.3;
+}
+
+.popular-item-img {
+  pointer-events: none;
 }
 
 .services {
@@ -1357,25 +1371,21 @@ a {
 }
 
 .form-price-value {
-  margin-bottom: 26px;
+  margin-bottom: 35px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: -7px;
 }
 
 .form-price-value label {
   font-family: "Gilroy", "Arial", sans-serif;
-  font-size: 14px;
-  font-weight: 300;
+  line-height: 24px;
   opacity: 0.2;
 }
 
 .form-price-value input {
   margin: 0;
   padding: 0;
-  color: inherit;
-  font: inherit;
   background: none;
   border: none;
   width: 40px;
@@ -1711,6 +1721,10 @@ a {
           justify-content: space-between;
 }
 
+.logo-footer svg {
+  pointer-events: none;
+}
+
 .logo-footer:hover {
   opacity: 0.6;
 }
@@ -1854,6 +1868,11 @@ a {
   opacity: 0.3;
 }
 
+.social-button span,
+.social-button svg {
+  pointer-events: none;
+}
+
 .footer-social a:hover {
   opacity: 0.6;
 }
@@ -1898,6 +1917,7 @@ a {
   background-position: 0 0;
   background-size: cover;
   text-indent: -10000px;
+  z-index: 2;
 }
 
 .footer-copyright-link:hover {
@@ -2037,9 +2057,7 @@ a {
   margin-bottom: 7px;
 }
 
-.write-us-form input[type="text"],
-.write-us-form input[type="email"],
-.write-us-form textarea {
+.write-input {
   font-family: "Open Sans", "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
@@ -2047,6 +2065,10 @@ a {
   color: rgba(70, 70, 70, 0.4);
   background-color: rgba(230, 230, 230, 0.5);
   border: none;
+}
+
+.invalid-input {
+  background-color: #f6dada;
 }
 
 .write-us-form input[type="text"],
