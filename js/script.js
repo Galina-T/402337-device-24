@@ -17,6 +17,17 @@ try {
   isStorageSupport = false;
 }
 
+function checkValide (el) {
+  if (el.value) {
+    return;
+  }
+  el.classList.add("invalid-input");
+}
+
+function removeInvalide (el) {
+  el.classList.remove("invalid-input");
+}
+
 writeBtn.addEventListener("click", function (evt) {
   evt.preventDefault();
   writePopup.classList.add("modal-show");
@@ -36,26 +47,6 @@ writeBtn.addEventListener("click", function (evt) {
   }
 });
 
-close.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  writePopup.classList.remove("modal-show");
-  writePopup.classList.remove("modal-error");
-  removeInvalide(login);
-  removeInvalide(email);
-  removeInvalide(comment);
-});
-
-function checkValide (el) {
-  if (el.value) {
-    return;
-  }
-  el.classList.add("invalid-input");
-}
-
-function removeInvalide (el) {
-  el.classList.remove("invalid-input");
-}
-
 form.addEventListener("submit", function (evt) {
   if (!login.value || !email.value || !comment.value) {
     evt.preventDefault();
@@ -68,6 +59,15 @@ form.addEventListener("submit", function (evt) {
       localStorage.setItem("login", login.value);
     }
   }
+});
+
+close.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  writePopup.classList.remove("modal-show");
+  writePopup.classList.remove("modal-error");
+  removeInvalide(login);
+  removeInvalide(email);
+  removeInvalide(comment);
 });
 
 window.addEventListener("keydown", function (evt) {
@@ -106,17 +106,19 @@ window.addEventListener("keydown", function (evt) {
   }
 });
 
-var carouselControls = document.querySelector(".carousel-controls");
+var carousel = document.querySelector(".carousel");
+var carouselControls = carousel.querySelector(".carousel-controls");
+var carouselInputs = document.querySelectorAll("[name=carousel-toggle]");
 var controls = carouselControls.children;
-var slides = document.querySelector(".carousel-slides-list").children;
+var slides = carousel.querySelector(".carousel-slides-list").children;
+var slideOptions = carousel.querySelector(".slide-options");
 
-document.getElementById('slide-1').checked = false;
 slides[0].classList.add("slide-show");
 controls[0].classList.add("label-active");
 
-carouselControls.addEventListener("click", function (evt) {
-  evt.preventDefault();
+carouselControls.style.bottom = (slideOptions.clientHeight + 60) + "px";
 
+carouselControls.addEventListener("click", function (evt) {
   if (evt.target === carouselControls || evt.target.classList.contains("label-active")) {
     return;
   }
@@ -125,14 +127,55 @@ carouselControls.addEventListener("click", function (evt) {
   var idSlide = 'carousel-' + forLable;
 
   Array.prototype.forEach.call(slides, function (element, inx) {
-
     if (element.id === idSlide) {
-      document.getElementById(forLable).checked = false;
       element.classList.add("slide-show");
       evt.target.classList.add("label-active");
     } else {
       element.classList.remove("slide-show");
       controls[inx].classList.remove("label-active");
+    }
+  });
+});
+
+Array.prototype.forEach.call(carouselInputs, function (element) {
+  element.addEventListener("keydown", function (evt) {
+
+    var idInput = evt.srcElement.id;
+    var idSlide = 'carousel-' + idInput;
+
+    if (evt.keyCode === 39) {
+      Array.prototype.forEach.call(slides, function (el, inx, arr) {
+        if (el.id !== idSlide) {
+          return;
+        }
+
+        el.classList.remove("slide-show");
+        controls[inx].classList.remove("label-active");
+        if (evt.target.nextElementSibling.name !== "carousel-toggle") {
+          arr[0].classList.add("slide-show");
+          controls[0].classList.add("label-active");
+        } else {
+          arr[inx + 1].classList.add("slide-show");
+          controls[inx + 1].classList.add("label-active");
+        }
+      });
+    }
+    if (evt.keyCode === 37) {
+      Array.prototype.forEach.call(slides, function (el, inx, arr) {
+        if (el.id !== idSlide) {
+          return;
+        }
+
+        el.classList.remove("slide-show");
+        controls[inx].classList.remove("label-active");
+        if (evt.target.previousElementSibling.name !== "carousel-toggle") {
+          arr[arr.length - 1].classList.add("slide-show");
+          controls[arr.length - 1].classList.add("label-active");
+        } else {
+          arr[inx - 1].classList.add("slide-show");
+          controls[inx - 1].classList.add("label-active");
+        }
+      });
     }
   });
 });

@@ -22,8 +22,8 @@
         </a>
         <div class="user-wrapper">
           <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
-            <input type="search" name="search" id="search-field">
-            <label for="search-field">Поиск по сайту</label>
+            <input type="search" name="search" id="search-field" placeholder="Поиск по сайту">
+            <label class="visually-hidden" for="search-field">Поиск по сайту</label>
             <button class="btn-search-form" type="submit">Найти</button>
           </form>
           <ul class="user-block-header">
@@ -152,7 +152,7 @@
               <div class="popular-item-img">
                 <img src="img/popular-1.svg" width="97" height="55" alt="фотография очков виртуальной реальности">
               </div>
-              Виртуальная реальность
+              <p>Виртуальная реальность</p>
             </a>
           </li>
           <li class="popular-item">
@@ -168,7 +168,7 @@
               <div class="popular-item-img">
                 <img src="img/popular-3.svg" width="71" height="87" alt="фотография экшн-камеры">
               </div>
-              Экшн-камеры
+              <p>Экшн-камеры</p>
             </a>
           </li>
           <li class="popular-item">
@@ -176,7 +176,7 @@
               <div class="popular-item-img">
                 <img src="img/popular-4.svg" width="107" height="65" alt="фотография фитнес браслета">
               </div>
-              Фитнес-браслеты
+              <p>Фитнес-браслеты</p>
             </a>
           </li>
           <li class="popular-item">
@@ -184,7 +184,7 @@
               <div class="popular-item-img">
                 <img src="img/popular-5.svg" width="56" height="98" alt="фотография умных часов">
               </div>
-              Умные часы
+              <p>Умные часы</p>
             </a>
           </li>
           <li class="popular-item">
@@ -192,7 +192,7 @@
               <div class="popular-item-img">
                 <img src="img/popular-6.svg" width="132" height="69" alt="фотография квадрокоптера">
               </div>
-              Квадрокоптеры
+              <p>Квадрокоптеры</p>
             </a>
           </li>
         </ol>
@@ -204,15 +204,9 @@
         <div class="container">
           <h2 class="visually-hidden">Услуги</h2>
           <div class="services-controls">
-            <p class="services-btn1-wrapper">
-              <label class="btn" for="services-btn-1">Доставка</label>
-            </p>
-            <p class="services-btn2-wrapper">
-              <label class="btn" for="services-btn-2">Гарантия</label>
-            </p>
-            <p class="services-btn3-wrapper">
-              <label class="btn" for="services-btn-3">Кредит</label>
-            </p>
+            <label class="btn" for="services-btn-1">Доставка</label>
+            <label class="btn" for="services-btn-2">Гарантия</label>
+            <label class="btn" for="services-btn-3">Кредит</label>
           </div>
           <div class="services-slides">
             <div class="services-slide services-slide-1" id="services-slide-1">
@@ -277,7 +271,7 @@
               <img src="img/map.png" width="560" height="222" alt="Улица Строителей 15">
             </a>
           </div>
-          <button class="btn inform-btn write-btn" type="button">Напишите нам</button>
+          <a href="#" class="btn inform-btn write-btn">Напишите нам</a>
         </section>
       </div>
     </main>
@@ -350,7 +344,7 @@
           <input class="write-input" type="email" name="email" id="email-field" placeholder="email@example.com">
         </p>
         <p class="write-us-letter">
-          <label class="write-us-form-label">Текст письма:</label>
+          <label class="write-us-form-label" for="comment-field">Текст письма:</label>
           <textarea class="write-input" name="comment" id="comment-field" placeholder="В свободной форме"></textarea>
         </p>
         <button class="btn" type="submit">Отправить</button>

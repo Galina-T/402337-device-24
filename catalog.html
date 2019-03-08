@@ -22,8 +22,8 @@
         </a>
         <div class="user-wrapper">
           <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
-            <input type="search" name="search" id="search-field">
-            <label for="search-field">Поиск по сайту</label>
+            <input type="search" name="search" id="search-field" placeholder="Поиск по сайту">
+            <label class="visually-hidden" for="search-field">Поиск по сайту</label>
             <button class="btn-search-form" type="submit">Найти</button>
           </form>
           <ul class="user-block-header">
@@ -72,26 +72,26 @@
             <h2 class="sorting-title">Сортировка:</h2>
             <ul class="sorting-list sorting-list-left">
               <li class="sorting-element">
-                <input class="visually-hidden sorting-input" name="sort" value="price" type="radio" id="sorting-price" checked>
+                <input class="visually-hidden sorting-input" name="sort" value="price" type="checkbox" id="sorting-price" checked>
                 <label class="sorting-label" for="sorting-price">По цене</label>
               </li>
               <li class="sorting-element">
-                <input class="visually-hidden sorting-input" name="sort" value="type" type="radio" id="sorting-type">
+                <input class="visually-hidden sorting-input" name="sort" value="type" type="checkbox" id="sorting-type">
                 <label class="sorting-label" for="sorting-type">По типу</label>
               </li>
               <li class="sorting-element">
-                <input class="visually-hidden sorting-input" name="sort" value="popular" type="radio" id="sorting-popular">
+                <input class="visually-hidden sorting-input" name="sort" value="popular" type="checkbox" id="sorting-popular">
                 <label class="sorting-label" for="sorting-popular">По популярности</label>
               </li>
             </ul>
             <ul class="sorting-list sorting-list-right">
               <li class="up-dir">
                 <input class="visually-hidden sorting-input" name="sort-left" value="up" type="radio" id="sorting-up">
-                <label class="visually-hidden sorting-label" for="sorting-up">По возрастанию</label>
+                <label class="sorting-label" for="sorting-up" aria-label="По возрастанию"></label>
               </li>
-              <li class="down-dir dir-active">
+              <li class="down-dir">
                 <input class="visually-hidden sorting-input" name="sort-left" value="down" type="radio" id="sorting-down" checked>
-                <label class="sorting-label visually-hidden" for="sorting-down">По убыванию</label>
+                <label class="sorting-label" for="sorting-down" aria-label="По убыванию"></label>
               </li>
             </ul>
           </div>
