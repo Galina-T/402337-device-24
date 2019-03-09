@@ -31,14 +31,16 @@ function removeInvalide (el) {
 writeBtn.addEventListener("click", function (evt) {
   evt.preventDefault();
   writePopup.classList.add("modal-show");
-  var yScroll = window.scrollY;
-  if (storage) {
-    login.value = storage;
-    email.focus();
-  } else {
-    login.focus();
-  }
-  window.scrollTo(0, yScroll);
+  var animationTimeMs = 600;
+
+  setTimeout(function() {
+    if (storage) {
+      login.value = storage;
+      email.focus();
+    } else {
+      login.focus();
+    }
+  }, animationTimeMs);
 });
 
 form.addEventListener("submit", function (evt) {
