@@ -22,7 +22,7 @@
         </a>
         <div class="user-wrapper">
           <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
-            <input type="search" name="search" id="search-field" placeholder="Поиск по сайту">
+            <input class="search-form-input" type="search" name="search" id="search-field" placeholder="Поиск по сайту">
             <label class="visually-hidden" for="search-field">Поиск по сайту</label>
             <button class="btn-search-form" type="submit">Найти</button>
           </form>
@@ -36,12 +36,12 @@
           <li class="menu-header-link"><a class="menu-first-link" href="#">Каталог товаров</a>
             <div class="menu-catalog-wrapper">
               <ul class="menu-catalog">
-                <li><a href="#">Виртуальная реальность</a></li>
-                <li><a href="#">Фитнес-браслеты</a></li>
-                <li><a href="#">Квадрокоптеры</a></li>
-                <li><a href="#">Моноподы для селфи</a></li>
-                <li><a href="#">Умные часы</a></li>
-                <li><a href="#">Экшн-камеры</a></li>
+                <li><a class="menu-catalog-link" href="#">Виртуальная реальность</a></li>
+                <li><a class="menu-catalog-link" href="#">Фитнес-браслеты</a></li>
+                <li><a class="menu-catalog-link" href="#">Квадрокоптеры</a></li>
+                <li><a class="menu-catalog-link" href="#">Моноподы для селфи</a></li>
+                <li><a class="menu-catalog-link" href="#">Умные часы</a></li>
+                <li><a class="menu-catalog-link" href="#">Экшн-камеры</a></li>
               </ul>
             </div>
           </li>
@@ -72,26 +72,21 @@
             <h2 class="sorting-title">Сортировка:</h2>
             <ul class="sorting-list sorting-list-left">
               <li class="sorting-element">
-                <input class="visually-hidden sorting-input" name="sort" value="price" type="checkbox" id="sorting-price" checked>
-                <label class="sorting-label" for="sorting-price">По цене</label>
+                <a class="sorting-element-link active" href="#">По цене</a>
               </li>
               <li class="sorting-element">
-                <input class="visually-hidden sorting-input" name="sort" value="type" type="checkbox" id="sorting-type">
-                <label class="sorting-label" for="sorting-type">По типу</label>
+                <a class="sorting-element-link" href="#">По типу</a>
               </li>
               <li class="sorting-element">
-                <input class="visually-hidden sorting-input" name="sort" value="popular" type="checkbox" id="sorting-popular">
-                <label class="sorting-label" for="sorting-popular">По популярности</label>
+                <a class="sorting-element-link" href="#">По популярности</a>
               </li>
             </ul>
             <ul class="sorting-list sorting-list-right">
               <li class="up-dir">
-                <input class="visually-hidden sorting-input" name="sort-left" value="up" type="radio" id="sorting-up">
-                <label class="sorting-label" for="sorting-up" aria-label="По возрастанию"></label>
+                <a class="dir-link" href="#">По возрастанию</a>
               </li>
               <li class="down-dir">
-                <input class="visually-hidden sorting-input" name="sort-left" value="down" type="radio" id="sorting-down" checked>
-                <label class="sorting-label" for="sorting-down" aria-label="По убыванию"></label>
+                <a class="dir-link active" href="#">По убыванию</a>
               </li>
             </ul>
           </div>
@@ -166,7 +161,7 @@
               <li class="card-item">
                 <div class="card-header">
                   <h3 class="item-title">
-                    <a href="#">Любительская селфи-палка</a>
+                    <a class="item-title-link" href="#">Любительская селфи-палка</a>
                   </h3>
                   <span class="item-ptice">500 руб.</span>
                 </div>
@@ -181,7 +176,7 @@
               <li class="card-item">
                 <div class="card-header">
                   <h3 class="item-title">
-                    <a href="#">Профессиональная селфи-палка</a>
+                    <a class="item-title-link" href="#">Профессиональная селфи-палка</a>
                   </h3>
                   <span class="item-ptice">1 500 руб.</span>
                 </div>
@@ -196,7 +191,7 @@
               <li class="card-item">
                 <div class="card-header">
                   <h3 class="item-title">
-                    <a href="#">Непотопляемая селфи-палка</a>
+                    <a class="item-title-link" href="#">Непотопляемая селфи-палка</a>
                   </h3>
                   <span class="item-ptice">2 500 руб.</span>
                 </div>
@@ -211,7 +206,7 @@
               <li class="card-item">
                 <div class="card-header">
                   <h3 class="item-title">
-                    <a href="#">Селфи-палка &#171;Следуй за мной&#187;</a>
+                    <a class="item-title-link" href="#">Селфи-палка &#171;Следуй за мной&#187;</a>
                   </h3>
                   <span class="item-ptice">4 900 руб.</span>
                 </div>
@@ -294,5 +289,7 @@
         </div>
       </div>
     </footer>
+    <script src="js/menu-hover.min.js"></script>
+    <script src="js/item-hover.min.js"></script>
   </body>
 </html>

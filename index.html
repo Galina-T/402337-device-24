@@ -22,7 +22,7 @@
         </a>
         <div class="user-wrapper">
           <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
-            <input type="search" name="search" id="search-field" placeholder="Поиск по сайту">
+            <input class="search-form-input" type="search" name="search" id="search-field" placeholder="Поиск по сайту">
             <label class="visually-hidden" for="search-field">Поиск по сайту</label>
             <button class="btn-search-form" type="submit">Найти</button>
           </form>
@@ -36,12 +36,12 @@
           <li class="menu-header-link"><a class="menu-first-link" href="#">Каталог товаров</a>
             <div class="menu-catalog-wrapper">
               <ul class="menu-catalog">
-                <li><a href="#">Виртуальная реальность</a></li>
-                <li><a href="#">Фитнес-браслеты</a></li>
-                <li><a href="#">Квадрокоптеры</a></li>
-                <li><a href="catalog.html">Моноподы для селфи</a></li>
-                <li><a href="#">Умные часы</a></li>
-                <li><a href="#">Экшн-камеры</a></li>
+                <li><a class="menu-catalog-link" href="#">Виртуальная реальность</a></li>
+                <li><a class="menu-catalog-link" href="#">Фитнес-браслеты</a></li>
+                <li><a class="menu-catalog-link" href="#">Квадрокоптеры</a></li>
+                <li><a class="menu-catalog-link" href="catalog.html">Моноподы для селфи</a></li>
+                <li><a class="menu-catalog-link" href="#">Умные часы</a></li>
+                <li><a class="menu-catalog-link" href="#">Экшн-камеры</a></li>
               </ul>
             </div>
           </li>
@@ -148,52 +148,22 @@
         <h2 class="visually-hidden">Популярные товары</h2>
         <ol class="popular-list">
           <li class="popular-item">
-            <a href="#">
-              <div class="popular-item-img">
-                <img src="img/popular-1.svg" width="97" height="55" alt="фотография очков виртуальной реальности">
-              </div>
-              <p>Виртуальная реальность</p>
-            </a>
+            <a class="popular-item-link popular-1" href="#">Виртуальная реальность</a>
           </li>
           <li class="popular-item">
-            <a href="catalog.html">
-              <div class="popular-item-img">
-                <img src="img/popular-2.svg" width="86" height="117" alt="фотография монопода">
-              </div>
-              <p>Моноподы для селфи</p>
-            </a>
+            <a class="popular-item-link popular-2" href="catalog.html">Моноподы для селфи</a>
           </li>
           <li class="popular-item">
-            <a href="#">
-              <div class="popular-item-img">
-                <img src="img/popular-3.svg" width="71" height="87" alt="фотография экшн-камеры">
-              </div>
-              <p>Экшн-камеры</p>
-            </a>
+            <a class="popular-item-link popular-item-link popular-3" href="#">Экшн-камеры</a>
           </li>
           <li class="popular-item">
-            <a href="#">
-              <div class="popular-item-img">
-                <img src="img/popular-4.svg" width="107" height="65" alt="фотография фитнес браслета">
-              </div>
-              <p>Фитнес-браслеты</p>
-            </a>
+            <a class="popular-item-link popular-4" href="#">Фитнес-браслеты</a>
           </li>
           <li class="popular-item">
-            <a href="#">
-              <div class="popular-item-img">
-                <img src="img/popular-5.svg" width="56" height="98" alt="фотография умных часов">
-              </div>
-              <p>Умные часы</p>
-            </a>
+            <a class="popular-item-link popular-5" href="#">Умные часы</a>
           </li>
           <li class="popular-item">
-            <a href="#">
-              <div class="popular-item-img">
-                <img src="img/popular-6.svg" width="132" height="69" alt="фотография квадрокоптера">
-              </div>
-              <p>Квадрокоптеры</p>
-            </a>
+            <a class="popular-item-link popular-6" href="#">Квадрокоптеры</a>
           </li>
         </ol>
       </section>
@@ -228,22 +198,22 @@
         <h2 class="visually-hidden">Бренды</h2>
         <ul class="brands-list">
           <li>
-            <a class="brand-link brand-link-JD" href="https://www.dji.com/">
+            <a class="brand-link brand-link-jd" href="https://www.dji.com/">
               <img id="dji" src="img/logo-dji.png" width="260" height="100" alt="Dji">
             </a>
           </li>
           <li>
-            <a class="brand-link brand-link-PGadgets" href="http://www.sp-gadgets.com/">
+            <a class="brand-link brand-link-pgadgets" href="http://www.sp-gadgets.com/">
               <img id="spg" src="img/logo-spg.png" width="260" height="100" alt="SPGadgets">
             </a>
           </li>
           <li>
-            <a class="brand-link brand-link-Gopro" href="https://gopro.ru/">
+            <a class="brand-link brand-link-gopro" href="https://gopro.ru/">
               <img id="gopro" src="img/logo-gopro.png" width="260" height="100" alt="Gopro">
             </a>
           </li>
           <li>
-            <a class="brand-link brand-link-Vive" href="https://www.vive.com/ru/">
+            <a class="brand-link brand-link-vive" href="https://www.vive.com/ru/">
               <img src="img/logo-vive.png" width="260" height="100" alt="Vive">
             </a>
           </li>
@@ -271,7 +241,7 @@
               <img src="img/map.png" width="560" height="222" alt="Улица Строителей 15">
             </a>
           </div>
-          <a href="#" class="btn inform-btn write-btn">Напишите нам</a>
+          <a href="write-us.html" class="btn inform-btn write-btn">Напишите нам</a>
         </section>
       </div>
     </main>
@@ -356,6 +326,7 @@
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.1123749473677!2d37.527429316089346!3d55.68703400452979!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1549598346193" width="960" height="559" style="border:0" allowfullscreen></iframe>
       <button class="modal-close" type="button">Закрыть</button>
     </section>
+    <script src="js/menu-hover.min.js"></script>
     <script src="js/script.min.js"></script>
   </body>
 </html>

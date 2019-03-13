@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 var writeBtn = document.querySelector(".write-btn");
 var writePopup = document.querySelector(".modal-write-us");
@@ -120,7 +120,7 @@ carouselControls.addEventListener("click", function (evt) {
   }
 
   var forLable = evt.srcElement.htmlFor;
-  var idSlide = 'carousel-' + forLable;
+  var idSlide = "carousel-" + forLable;
 
   Array.prototype.forEach.call(slides, function (element, inx) {
     if (element.id === idSlide) {
@@ -137,7 +137,7 @@ Array.prototype.forEach.call(carouselInputs, function (element) {
   element.addEventListener("keydown", function (evt) {
 
     var idInput = evt.srcElement.id;
-    var idSlide = 'carousel-' + idInput;
+    var idSlide = "carousel-" + idInput;
 
     if (evt.keyCode === 39) {
       Array.prototype.forEach.call(slides, function (el, inx, arr) {
@@ -173,5 +173,20 @@ Array.prototype.forEach.call(carouselInputs, function (element) {
         }
       });
     }
+  });
+});
+
+var services = document.querySelector(".services");
+var servicesInputs = services.querySelectorAll("[name=services-toggle]");
+var servicesLabels = services.querySelectorAll(".btn");
+
+Array.prototype.forEach.call(servicesInputs, function (el) {
+  el.setAttribute("tabindex", "-1");
+});
+
+Array.prototype.forEach.call(servicesLabels, function (el, inx) {
+  el.setAttribute("tabindex", "0");
+  el.addEventListener("focus", function () {
+    servicesInputs[inx].checked = true;
   });
 });
